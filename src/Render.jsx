@@ -5,8 +5,10 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import CircularProgress from '@mui/material/CircularProgress';
 import SERVER_URL from "./server_url";
+import { useSearchParams } from "react-router-dom";
 
 const Render = () => {
+  const [searchParams,setSearchParams]=useSearchParams();
   const [formData, setFormData] = useState();
   const [categoryAnswers, setCategoryAnswers] = useState({});
   const [clozeSentenceArr, setClozeSentenceArr] = useState([]);
@@ -14,7 +16,8 @@ const Render = () => {
   const [progressChk, setProgressChk] = useState(false);
 
   const navigate=useNavigate();
-  const { id,view } = useParams();
+  const id = searchParams.get('id');
+  const view = searchParams.get('view');
   useEffect(() => {
     const fetchFormData = async () => {
       setProgressChk(true);

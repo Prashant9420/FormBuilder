@@ -1,0 +1,103 @@
+/* Cloze.css */
+
+/* General styling for the Cloze container */
+.cloze-main {
+  font-family: Arial, sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:#a53eff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloze-section {
+  margin-bottom: 20px;
+}
+
+/* Styling for the 'What is Cloze?' section */
+.cloze-section h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cloze-section p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Styling for the sentence input section */
+label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the options section */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.option {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+}
+
+.option p {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Styling for the drag-and-drop */
+.option.dragging {
+  background-color: #f3f3f3;
+  transform: scale(1.05);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Styling for the Add Option button */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input#box {
+  width: 30%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}

@@ -1,0 +1,50 @@
+.category-item{
+  border:5px solid blue;
+  padding: 15px;
+  margin:15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.form-container{
+  /* border:2px solid red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.categoryList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-part{
+  /* border:2px solid red; */
+  width: 100%;
+}
+.category{
+  background-color: aqua;
+  padding: 10px;
+}
+.cloze-container{
+  background-color: blueviolet;
+  /* border:2px solid red; */
+  width: 100%;
+  padding: 20px;
+}
+.cloze-sentence{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.word{
+  /* border: 2px solid red; */
+  padding: 0px 10px;
+}
+.main{
+  margin-top: 50px;
+}
+.comprehension{
+  background-color: aqua;
+  padding: 50px;
+}

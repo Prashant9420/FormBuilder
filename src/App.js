@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Forms />} />
           <Route path="/build" element={<Home/>} />
           
-         <Route path="/render/:id/:view" element={<Render/>}/>
+         <Route path="/render/:id" element={<Render/>}/>
         </Routes>
       </Router>
     </div>

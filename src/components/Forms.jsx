@@ -84,10 +84,10 @@ const Forms = () => {
                             onClick={async () => {
                               await navigator.clipboard.writeText(
                                 `${window.location.origin}/render/${form._id}/false`
-                              );
+                                );
                               toast("link copied");
                             }}
-                            // await  navigator.clipboard.writeText(`${window.location.origin}/render/${form._id}/false`);
+                            
                           >
                             Copy Form Link
                           </button>

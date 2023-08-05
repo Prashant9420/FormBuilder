@@ -4,8 +4,11 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import SERVER_URL from "../server_url";
+import { useSearchParams } from "react-router-dom";
+
 
 const Forms = () => {
+  const [searchParams,setSearchParams]=useSearchParams();
   const deleteForm = async (id) => {
     try {
       await fetch(`${SERVER_URL}/deleteForm`, {
@@ -74,7 +77,11 @@ const Forms = () => {
                           <button
                             type="button"
                             className="btn btn-sm btn-outline-secondary"
-                            onClick={() => navigate(`/render/${form._id}`)}
+                            onClick={() =>{
+                              setSearchParams({id:form._id})
+                              setSearchParams({view:'true'})
+                              navigate(`/render?id=${form._id}&view=true`)
+                            }}
                           >
                             View
                           </button>
@@ -82,9 +89,11 @@ const Forms = () => {
                             type="button"
                             className="btn btn-sm btn-outline-secondary"
                             onClick={async () => {
+                              setSearchParams({id:form._id})
+                              setSearchParams({view:'false'})
                               await navigator.clipboard.writeText(
-                                `${window.location.origin}/render/${form._id}`
-                                );
+                                `${window.location.origin}/render?id=${form._id}&view=false`
+                              );
                               toast("link copied");
                             }}
                             

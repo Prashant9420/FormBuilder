@@ -74,7 +74,7 @@ const Forms = () => {
                           <button
                             type="button"
                             className="btn btn-sm btn-outline-secondary"
-                            onClick={() => navigate(`/render/${form._id}/true`)}
+                            onClick={() => navigate(`/render/${form._id}`)}
                           >
                             View
                           </button>
@@ -83,7 +83,7 @@ const Forms = () => {
                             className="btn btn-sm btn-outline-secondary"
                             onClick={async () => {
                               await navigator.clipboard.writeText(
-                                `${window.location.origin}/render/${form._id}/false`
+                                `${window.location.origin}/render/${form._id}`
                                 );
                               toast("link copied");
                             }}
